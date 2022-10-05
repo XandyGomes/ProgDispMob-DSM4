@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/transferencias/lista_transferencia.dart';
+import 'screens/dashboard.dart';
 
 void main() => runApp(
       Banco(),
@@ -10,7 +10,8 @@ class Banco extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: ListaTransferencia(),
+      debugShowCheckedModeBanner: false,
+      home: Dashboard(),
     );
   }
 }
