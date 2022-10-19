@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:progdispmobdsm4/screens/contatos/formularioContatos.dart';
+import 'screens/contatos/listaContatos.dart';
 import 'screens/dashboard.dart';
 
 void main() => runApp(
@@ -11,7 +13,15 @@ class Banco extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Dashboard(),
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Color(0xff000000),
+          brightness: Brightness.light,
+          primary: Color(0xff1e38a7),
+          secondary: Color(0xff1e38a7),
+        ),
+      ),
+      home: FormularioContatos(),
     );
   }
 }
