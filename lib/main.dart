@@ -21,7 +21,7 @@ class Banco extends StatelessWidget {
           secondary: Color(0xff1e38a7),
         ),
       ),
-      home: FormularioContatos(),
+      home: Dashboard(),
     );
   }
 }
