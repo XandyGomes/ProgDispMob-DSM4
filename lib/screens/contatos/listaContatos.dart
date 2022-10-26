@@ -46,7 +46,9 @@ class ListaContatos extends StatelessWidget {
                 ),
               )
               .then(
-                (newContato) => debugPrint(newContato.toString()),
+                (newContato) => debugPrint(
+                  newContato.toString(),
+                ),
               );
         },
         child: Icon(
