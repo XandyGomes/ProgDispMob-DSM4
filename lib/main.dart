@@ -1,11 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:progdispmobdsm4/screens/contatos/formularioContatos.dart';
+import 'database/app_database.dart';
+import 'models/contato.dart';
 import 'screens/contatos/listaContatos.dart';
 import 'screens/dashboard.dart';
 
-void main() => runApp(
-      Banco(),
-    );
+void main() {
+  runApp(
+    Banco(),
+  );
+  save(
+    Contato(0, 'Alexandre', 2354),
+  ).then(
+    (id) {
+      findAll().then(
+        (contatos) => debugPrint(
+          contatos.toString(),
+        ),
+      );
+    },
+  );
+}
 
 class Banco extends StatelessWidget {
   @override
