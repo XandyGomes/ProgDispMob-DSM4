@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../database/app_database.dart';
 import '../../models/contato.dart';
 
 const _tituloAppBar = 'Novo Contato';
@@ -72,7 +73,7 @@ class _FormularioContatosState extends State<FormularioContatos> {
                   final int? accountNumber =
                       int.tryParse(_accountNumberController.text);
                   final Contato newContato = Contato(0, name, accountNumber!);
-                  Navigator.pop(context, newContato);
+                  save(newContato).then((id) => Navigator.pop(context));
                 },
               ),
             ),

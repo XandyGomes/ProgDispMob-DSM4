@@ -9,17 +9,6 @@ void main() {
   runApp(
     Banco(),
   );
-  save(
-    Contato(0, 'Alexandre', 2354),
-  ).then(
-    (id) {
-      findAll().then(
-        (contatos) => debugPrint(
-          contatos.toString(),
-        ),
-      );
-    },
-  );
 }
 
 class Banco extends StatelessWidget {
